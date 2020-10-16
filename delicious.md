@@ -648,7 +648,7 @@ If you're lucky enough to be in high enough demand that you can consider either 
 Frequency illusion / Baader-Meinhof Phenomenon
 ================================================================================
   href="http://en.wikipedia.org/wiki/List_of_cognitive_biases#Frequency_illusion"
-    tag="concepts cogsci mental-model"
+    tag="concepts psychology mental-model"
   time="2015-02-13T19:03:21Z" 
 
 
@@ -1441,7 +1441,7 @@ How I Rewired My Brain to Become Fluent in Math - Issue 17: Big Bangs - Nautilus
 ================================================================================
   students can often grasp essentials of an important idea, but this understanding can quickly slip away without consolidation through practice and repetition. / well-ingrained chunks of expertise through practice and repetition / Understanding doesn‚Äôt build fluency; instead, fluency builds understanding. / understanding, after all, is facile, and can easily slip away.
   href="http://nautil.us/issue/17/big-bangs/how-i-rewired-my-brain-to-become-fluent-in-math-rd"
-    tag="learning cogsci math pedagogy"
+    tag="learning psychology math pedagogy"
   time="2014-12-17T00:55:04Z" 
 
 Michael Pettis' CHINA FINANCIAL MARKETS
@@ -1569,6 +1569,54 @@ Hoon and You - An FP Perspective
 https://github.com/famousj/hoon-lc2018/blob/master/hoon-talk.md
 tag="urbit p2p hoon functional-programming fp programming"
 
+Why Hoon? - Ted Blackman ~rovnys-ricfer
+================================================================================
+https://urbit.org/blog/why-hoon/
+tag="urbit p2p hoon functional-programming fp os system"
+- Homoiconic. Metacircular interpreter called +mule. Run userspace code
+  metacircularly ("eval"). In Lisp "eval is evil", but in Urbit eval is
+  a first-class feature.
+- Universally serializable. One serialization format, called "jam", for any
+  piece of code/data in the system. => security, portability of VM state
+- Subject-oriented. There is no implicit environment; a Hoon expression ... is
+  interpreted as a function that runs with the "subject" as the argument. It
+  contains everything that's in scope: usually the Hoon compiler and standard
+  library, plus whatever functions/variables were defined in the lexical scope.
+- Inert. There are no special objects that can't be manipulated; everything in
+  your environment is just a subtree, and you could grab it and print it out if
+  you wanted to. There's nothing like a "database handle", "websocket connection
+  object", or other mystical constructs.
+- "The way the system commands your attention is that it gives you importance in
+  exchange for being a tool."
+
+Ford Fusion
+================================================================================
+https://urbit.org/blog/ford-fusion/
+tag="urbit p2p hoon functional-programming fp os system"
+"The purpose of better architecture is to create unfair comparisons."
+> because the Nock layer is frozen, upgrading everything above that layer is
+> easier. Upgrades are also facilitated by pure-functional semantics,
+> transactional event processing, a type system oriented toward concrete data,
+> and orthogonal persistence. These features make it feasible for Urbit to
+> upgrade itself in the general case, not just some special cases.
+>
+> Ford Fusion has fixed the major upgrade issues of the past by guaranteeing three properties that in retrospect are obvious requirements, but, like much of Urbit, took many years and rewrites to identify as such:
+>
+> 1. Atomic: the update should complete or fail in one transaction.
+> 2. Self-contained: there must be no implicit dependencies or hysteresis when building the new software from source.
+> 3. Ordered: updates must be monotonically sequenced from the system's lowest layer to highest.
+>
+> Asynchronicity is an entropic state: a system will tend toward more
+> asynchronicity over time unless effort is put into keeping it synchronous. As
+> Jonathan Blow noted, LSP turns your editor into a distributed system.
+
+rote: flashcard app for Urbit Landscape
+================================================================================
+https://github.com/lukechampine/rote
+tag="urbit p2p hoon functional-programming fp app"
+- "immaculate backend code-style and documentation"
+- also functions as a full "Hoon app" walkthrough
+- Luke also kept a Notebook documenting his experience at ~watter-parter/hackathon.
 
 A Founder's Farewell
 ================================================================================
@@ -2367,7 +2415,7 @@ Warning Signs in Experimental Design and Interpretation
   Psychology as a discipline has been especially stung by papers that cannot be reproduced. http://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html?pagewanted=all&amp;amp;_r=0 Uri Simonsohn &amp;quot;twenty-one word solution&amp;quot;: http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2160588 &amp;quot;p-hacking&amp;quot;, an all too common practice in science that can be detected by statistical tests: http://www.p-curve.com/ http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2259879 &amp;quot;Abstract: &amp;quot;When does a replication attempt fail? The most common standard is: when it obtains p&amp;gt;.05. Replication attempts fail when their results indicate that the effect, if it exists at all, is too small to have been detected by the original study. &amp;quot;Warning Signs in Experimental Design and Interpretation&amp;quot; http://norvig.com/experiment-design.html
   href="http://news.ycombinator.com/item?id=5680292" 
   
-  tag="cogsci psychology skepticism scientific-error science"
+  tag="psychology skepticism scientific-error science"
   time="2013-05-09T18:08:55Z" 
 
 Peter Norvig: pytudes: Python programs to practice or demonstrate skills.
@@ -2394,14 +2442,14 @@ only 11% of 53 published cancer research papers were reproducible
 Voting paradox
 ================================================================================
   href="http://en.wikipedia.org/wiki/Voting_paradox" 
-   tag="politics paradox cogsci voting mental-model"
+   tag="politics paradox psychology voting mental-model"
   time="2013-05-07T23:13:12Z" 
 
 Arrow's impossibility theorem
 ================================================================================
   href="http://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem"
    
-  tag="game-theory politics paradox cogsci voting logic mental-model"
+  tag="game-theory politics paradox psychology voting logic mental-model"
   time="2013-05-07T23:10:53Z" 
 
 Windyty: weather visualizer
@@ -2525,13 +2573,31 @@ https://github.com/guardianproject/haven
 Haven is for people who need a way to protect their personal spaces and possessions without compromising their own privacy, through an Android app and on-device sensors
 tag="paranoia security app mobile phone"
 
-Algo VPN: personal IPSEC VPN in the cloud
 ================================================================================
+Algo VPN: personal IPSEC VPN in the cloud
 https://github.com/trailofbits/algo
 https://blog.trailofbits.com/2016/12/12/meet-algo-the-vpn-that-works/
 tag="anonymous privacy vpn paranoia security ipsec"
-.
 Does not require client software (unlike OpenVPN).
+
+================================================================================
+20200829
+sinter: user-mode application authorization system for MacOS written in Swift
+https://github.com/trailofbits/sinter
+tag="macos security infosec os"
+https://blog.trailofbits.com/2020/08/12/sinter-new-user-mode-security-enforcement-for-macos/
+> EndpointSecurity is an API that implements a callback from the macOS kernel,
+> in real time, as a particular event is about to happen. EndpointSecurity
+> clients subscribe to one or more event types that are either a NOTIFY type or
+> an AUTH (Authorization) type.
+>
+> EndpointSecurity replaces the kernel-mode equivalents for real-time event
+> authorizing on macOS (Kauth KPI and other unsupported kernel methods) and the
+> read-only event monitoring OpenBSM audit trail.
+>
+> Note that there are no network-related events in the EndpointSecurity API
+> (except UNIX domain sockets). All of these are in the Network Extension
+> framework. You can combine the use of both APIs from one System Extension.
 
 Color Scheme Designer 
 ================================================================================
@@ -2817,29 +2883,22 @@ More study of diff: Walter Tichy's papers
 ================================================================================
 http://bryanpendleton.blogspot.de/2010/04/more-study-of-diff-walter-tichys-papers.html
 tag="programming algorithms diff"
-
 two papers by Walter Tichy:
-
 - The String-to-String Correction Problem with Block Moves
   http://docs.lib.purdue.edu/cstech/378/
 - Delta Algorithms: An Empirical Analysis
   http://portal.acm.org/citation.cfm?id=279310.279321
-
 The first paper is almost 30 years old, and dates from Tichy's work at Purdue
 during the development of RCS. From the introduction:
-
-The string-to-string correction problem is to find a minimal sequence of edit
+  The string-to-string correction problem is to find a minimal sequence of edit
 operations for changing a given string into another given string. The length of
 the edit sequence is a measure of the differences between the two strings.
-
-At the time, the best-known diff algorithm was Doug McIlroy's Unix diff
+  At the time, the best-known diff algorithm was Doug McIlroy's Unix diff
 algorithm (more on that in a future post), which is based on the detection of
 the Longest Common Subsequence. As Tichy shows, the LCS-based algorithms, while
 computationally related to the edit sequence programs, are not necessarily the
 best for use in difference construction.
-
 Tichy's basic algorithm is surprisingly simple to state:
-
     Start at the left end of the target string T, and try to find prefixes of
     T in S. If no prefix of T occurs in S, remove the first symbol from T and
     start over. If there are prefixes, choose the longest one and record it as
@@ -2847,26 +2906,20 @@ Tichy's basic algorithm is surprisingly simple to state:
     a longest prefix of the remaining tail of T, again starting at the beginning
     of S. This process continues until T is exhausted. The recorded block moves
     constitute a minimal covering set of block moves.
-
 After working through a proof of the basic algorithm, Tichy briefly touches on
 two variations:
-
-Program text and prose have the property of few repeated lines. ... To speed up
+  Program text and prose have the property of few repeated lines. ... To speed up
 comparisons, the program should use hashcodes for lines of text rather than
 performing character-by-character comparisons.
-
-An important element in the Knuth-Morris-Pratt algorithm is an auxiliary array
+  An important element in the Knuth-Morris-Pratt algorithm is an auxiliary array
 N which indicates how far to shift a partially matched pattern or block move
 after a mismatch. ... Fortunately, N can also be computed incrementally.
-
-The first variation finds an interesting expression 15 years later in the work
+  The first variation finds an interesting expression 15 years later in the work
 of Andrew Tridgell on the rsync algorithm, which I'll discuss in a future post.
-
-Delta Algorithms: An Empirical Analysis describes Tichy's work in benchmarking
+  Delta Algorithms: An Empirical Analysis describes Tichy's work in benchmarking
 diff algorithms. The paper contains dozens of scatter-plot diagrams of the
 various benchmark tests, as well as a fine high-level discussion of the
 complexity of building a suitable benchmark for diff:
-
     The first problem encountered when defining a benchmark is finding an
     appropriate data set that is both large enough for the results to be
     statistically significant and representative of real world applications. For
@@ -2876,12 +2929,9 @@ complexity of building a suitable benchmark for diff:
     considerably. Large changes on small files and small changes on large files
     should be included as well as small changes on small files and large changes
     on large files.
-
 Furthermore, the benchmark should contain a variety of formats, in particular
 pure text, pure object code, and pseudo text.
-
 The paper also describes a diff algorithm variation which they call vdelta:
-
     Vdelta is a new technique that combines both data compression and data
     differencing. It is a refinement of W.F. Tichy's block-move algorithm, in
     that, instead of a suffix tree, vdelta uses a hash table approach inspired
@@ -2892,9 +2942,7 @@ The paper also describes a diff algorithm variation which they call vdelta:
     string matching to be done both within the target data and between a source
     data and a target data. For efficiency, vdelta relaxes the greedy parsing
     rule so that matching prefixes are not always maximally long.
-
 With diff algorithms, it is becoming clear that two things are true:
-
 - There have been a variety of diff algorithms discovered and re-discovered over
   the years, but many of them are not well-described nor easy to find: the
   papers are scattered, hard to locate, and behind ACM or IEEE paywalls; and
@@ -2905,15 +2953,14 @@ With diff algorithms, it is becoming clear that two things are true:
 
 google-diff-match-patch - Google Code
 ================================================================================
-  robust diff/patch library Myer's diff algorithm Bitap matching algorithm more sophisticated than GNU patch
-  href="https://github.com/google/diff-match-patch"
-  tag="google library programming algorithms diff lua"
+robust diff/patch library Myer's diff algorithm Bitap matching algorithm more sophisticated than GNU patch
+href="https://github.com/google/diff-match-patch"
+tag="google library programming algorithms diff lua"
 
 [Toybox] More than you really wanted to know about patch.
 ================================================================================
 http://lists.landley.net/pipermail/toybox-landley.net/2019-January/010049.html
 tag="programming tools unix algorithms diff patch"
-
 > So generally what you do _now_ (and what tools like svn/mercurial/git simulate
 > behind the scenes) is back up one directory, have two full trees (the vanilla
 > project and your modified version), and "diff -ruN" the two subdirectories.
@@ -2944,6 +2991,15 @@ tag="programming tools unix algorithms diff patch"
 > - Hunks must apply in order, and this INCLUDES the context lines. A line that's
 >   been "seen" as a trailing context line won't match against the leading context
 >   of the next hunk.
+
+================================================================================
+20200829
+Graphtage: A New Semantic Diffing Tool
+https://github.com/trailofbits/graphtage
+tag="programming tools algorithms diff patch merge semantic-diff"
+https://blog.trailofbits.com/2020/08/28/graphtage/
+When paired with PolyFile, you can semantically diff arbitrary file formats.
+https://blog.trailofbits.com/2019/11/01/two-new-tools-that-tame-the-treachery-of-files/
 
 Data Laced with History: Causal Trees & Operational CRDTs
 ================================================================================
@@ -3901,7 +3957,7 @@ EDITORIAL: TSA comes to your bus stop - Washington Times
 Spaced Repetition
 ================================================================================
 https://ncase.me/remember/
-tag="cogsci neuroplasticity memory mnemonics anki spaced-repetition"
+tag="psychology neuroplasticity memory mnemonics anki spaced-repetition"
 .
 SPACED REPETITION is essentially "flashcards" with an emphasis on:
     1. time
@@ -3915,7 +3971,7 @@ SPACED REPETITION is essentially "flashcards" with an emphasis on:
 Augmenting Long-term Memory
 ================================================================================
 http://augmentingcognition.com/ltm.html
-tag="cogsci neuroplasticity memory mnemonics anki spaced-repetition"
+tag="psychology neuroplasticity memory mnemonics anki spaced-repetition"
 .
 SYNTOPIC reading with Anki (grok an unfamiliar field/literature)
 > Avoid orphan questions: questions too disconnected from your other interests lack the original motivating context.
@@ -3924,7 +3980,7 @@ SYNTOPIC reading with Anki (grok an unfamiliar field/literature)
 AnkiWeb: Shared Decks
 ================================================================================
 https://ankiweb.net/shared/decks/
-tag="cogsci neuroplasticity memory mnemonics anki spaced-repetition"
+tag="psychology neuroplasticity memory mnemonics anki spaced-repetition"
 ☃ german deck: https://ankiweb.net/shared/info/785874566
 
 
@@ -3939,7 +3995,7 @@ Can You Build a Better Brain? - Newsweek
 ================================================================================
   neuroplasticity
   href="http://www.newsweek.com/2011/01/03/can-you-build-a-better-brain.html"
-    tag="cogsci"
+    tag="psychology"
   time="2011-01-04T10:21:18Z" 
 
 Christopher Hitchens
@@ -3960,14 +4016,14 @@ Panopticlick
 ================================================================================
   web browser identity, fingerprint.¬† browser configuration = web sites may be able to track you even if you disable cookies. see also:¬†http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/
   href="http://panopticlick.eff.org/"  
-  tag="privacy paranoia compsci statistics security"
+  tag="privacy paranoia compsci statistics security fingerprinting webbrowser web"
   time="2010-12-21T06:33:11Z" 
 
 How Teen Experiences Affect Your Brain for Life - Newsweek
 ================================================================================
   teen years are a period of crucial brain development. mid-20s, or later, for a brain to become fully developed. one of the last parts to mature is the frontal lobe ... modulating reward, planning, impulsiveness, attention, acceptable social behavior former adolescent drinkers had ... very exaggerated responses to mild stress. kids who smoked pot before age 16 had more lifelong cognitive problems than those who started smoking after 16
   href="http://www.newsweek.com/2010/12/16/the-kids-can-t-help-it.html"
-    tag="cogsci"
+    tag="psychology"
   time="2010-12-20T07:43:01Z" 
 
 Google App Engine Pipeline API
@@ -4009,7 +4065,7 @@ Simpson's paradox
   &amp;quot;an apparent paradox in which a correlation (trend) present in different groups is reversed when the groups are combined.&amp;quot; Q: why should a story, not data, dictate choices? A: the story encodes the causal relationships among the variables. Once we extract these relationships, we can represent them in a Causal Bayesian Network graph which we can test algorithmically. - Berkeley sex bias case - Kidney stone treatment
   href="http://en.wikipedia.org/wiki/Simpson_s_paradox"
    
-  tag="paradox cogsci mathematics statistics concepts mental-model"
+  tag="paradox psychology mathematics statistics concepts mental-model"
   time="2010-11-30T05:00:20Z" 
 
 DE(E)SU - Libert√© Linux
@@ -4029,7 +4085,7 @@ Procrastination, hyperbolic discounting
 ================================================================================
   Misconception: You procrastinate because you are lazy and can‚Äôt manage your time well. Truth: Procrastination is fueled by weakness in the face of impulse and a failure to think about thinking. Now-you must trick future-you into doing what is right for both parties. ...why you keep adding movies you will never watch to your growing collection of future rentals ... the same reason you believe you will eventually do what‚Äôs best for yourself in all the other parts of your life, but rarely do. present bias = being unable to grasp that what you want will change over time hyperbolic discounting = the tendency to get more rational when you are forced to wait
   href="http://youarenotsosmart.com/2010/10/27/procrastination/"
-    tag="cogsci project-management"
+    tag="psychology project-management"
   time="2010-10-28T11:47:52Z" 
 
 Firesheep ... HTTP Session Hijacking
@@ -4072,7 +4128,7 @@ Power Posing: Fake It Until You Make It
 ================================================================================
   holding one's body in expansive, &quot;high-power&quot; poses for as little as two minutes stimulates higher levels of testosterone ... and lower levels of cortisol.
   href="http://hbswk.hbs.edu/item/6461.html" 
-   tag="cogsci" time="2010-10-13T18:28:09Z" 
+   tag="psychology" time="2010-10-13T18:28:09Z" 
 
 Feds are monitoring and tracking redditors for their comments, or &quot;How I learned to STFU and love the police state&quot;.
 ================================================================================
@@ -4122,7 +4178,7 @@ How to Think (Technology Review: Blogs: Ed Boyden's blog)
 ================================================================================
   &quot;1. Synthesize new ideas constantly. Never read passively. Annotate, model, think, and synthesize while you read...&quot; &quot;9. Document everything obsessively. If you don't record it, it may never have an impact on the world. Much of creativity is learning how to see things properly...&quot; &quot;time management... logarithmic time planning, in which events that are close at hand are scheduled with finer resolution than events that are far off.&quot;
   href="http://www.technologyreview.com/blog/boyden/21925/"
-    tag="learning cogsci"
+    tag="learning psychology"
   time="2010-09-01T00:13:29Z" 
 
 Regexes For Life 
@@ -4189,14 +4245,14 @@ Second-order simulacra
 ================================================================================
   A system whose legitimacy is implied by its complexity. E.g., psychology/psychoanalysis, alchemy, astrology, chiropractic are presumed valuable because they are complicated and have experts. The foundation of the system is not questioned because people are too busy debating the higher-order results of the system.
   href="http://en.wikipedia.org/wiki/Second-order_simulacra"
-    tag="concepts cogsci mental-model"
+    tag="concepts psychology mental-model"
   time="2010-08-23T06:16:25Z" 
 
 Blue Brain Project
 ================================================================================
 attempt to reverse-engineer the mammalian brain, in order to understand brain function and dysfunction through detailed simulations.
 https://www.epfl.ch/research/domains/bluebrain/
-tag="ai cogsci"
+tag="ai psychology"
 
 Antarctic Peninsula
 ================================================================================
@@ -4208,7 +4264,7 @@ The Cognitive Benefits of Nature : The Frontal Cortex
 ================================================================================
   &quot;interacting with nature ... improves cognitive function&quot;
   href="http://scienceblogs.com/cortex/2008/11/the_cognitive_benefits_of_natu.php"
-    tag="cogsci health"
+    tag="psychology health"
   time="2010-07-15T00:39:17Z" 
 
 App Inventor for Android 
@@ -4290,7 +4346,7 @@ Nootropic
 ================================================================================
   smart drugs, memory enhancers, and cognitive enhancers: drugs, supplements, nutraceuticals, and functional foods that are purported to improve mental functions.
   href="http://en.wikipedia.org/wiki/Nootropic" 
-   tag="cogsci learning physiology" time="2010-05-07T21:33:38Z" 
+   tag="psychology learning physiology" time="2010-05-07T21:33:38Z" 
 
 FRPAX Franklin PA Tax-Free Income A
 ================================================================================
@@ -4634,7 +4690,7 @@ Directed Edge - Blog - On Building a Stupidly Fast Graph Database
 Moserware: Wetware Refactorings 
 ================================================================================
   href="http://www.moserware.com/2009/01/wetware-refactorings.html"
-    tag="todo learning cogsci"
+    tag="todo learning psychology"
   time="2010-03-14T01:26:26Z" 
 
 
@@ -4702,7 +4758,7 @@ Are Machine-Learned Models Prone to Catastrophic Errors?
   Nassim Taleb divides phenomena into two classes: Mediocristan, consisting of phenomena that fit the bell curve model, such as games of chance, height and weight in humans, and so on. Here future observations can be predicted by extrapolating from variations in statistics based on past observation (for example, sample means and standard deviations). Extremistan, consisting of phenomena that don't fit the bell curve model, such as the search queries, the stock market, the length of wars, and so on. Sometimes such phenomena can sometimes be modeled using power laws or fractal distributions, and sometimes not. In many cases, the very notion of a standard deviation is meaningless. The current generation of machine learning algorithms can work well in Mediocristan but not in Extremistan. The very metrics these algorithms use, such as precision, recall, and root-mean square error (RMSE), make sense only in Mediocristan.
   href="http://anand.typepad.com/datawocky/2008/05/are-human-experts-less-prone-to-catastrophic-errors-than-machine-learned-models.html"
    
-  tag="compsci ai cogsci machine-learning"
+  tag="compsci ai psychology machine-learning"
   time="2010-02-02T05:07:06Z" 
 
 optionshouse.com - Stock Option Trading Broker, Online Options Trading Platform ...
@@ -4827,7 +4883,7 @@ Innovative Minds Don't Think Alike
 ================================================================================
   the &quot;curse of knowledge&quot;. &quot;It‚Äôs why engineers design products ultimately useful only to other engineers. It‚Äôs why managers have trouble convincing the rank and file to adopt new processes.&quot;
   href="http://www.nytimes.com/2007/12/30/business/30know.html"
-  tag="learning engineering cogsci business"
+  tag="learning engineering psychology business"
   time="2009-10-07T22:20:27Z" 
 
 A Stick Figure Guide to the Advanced Encryption Standard (AES)
@@ -4916,7 +4972,7 @@ Seeking: The powerful and mysterious brain circuitry that makes us love Google .
 ================================================================================
   Seeking ... is the mammalian motivational engine that each day gets us out of the bed. dopamine circuits &quot;promote states of eagerness and directed purpose&quot;. Panksepp says a way to drive animals into a frenzy is to give them only tiny bits of food.
   href="http://www.slate.com/default.aspx?id=2224932" 
-   tag="cogsci learning" time="2009-08-15T18:42:29Z" 
+   tag="psychology learning" time="2009-08-15T18:42:29Z" 
 
 An Intuitive Explanation of Fourier Theory
 ================================================================================
@@ -4940,10 +4996,14 @@ Motion Mountain: The Free Physics Textbook
 ================================================================================
 http://jsomers.net/concerning_the_soul.pdf
 tag="literature books"
-  contemplation:
-  > At the moment when desire ceases and contemplation, pure seeing, and self-surrender begin, everything changes. Man ceases to be useful or dangerous, interesting or boring, genial or rude, strong or weak. He becomes nature, he becomes beautiful and remarkable as does everything that is an object of clear contemplation.
+contemplation:
+> At the moment when desire ceases and contemplation, pure seeing, and
+> self-surrender begin, everything changes. Man ceases to be useful or
+> dangerous, interesting or boring, genial or rude, strong or weak. He becomes
+> nature, he becomes beautiful and remarkable as does everything that is an
+> object of clear contemplation.
 
-Cato Unbound &quot; Blog Archive &quot; Beyond Folk Activism
+Cato Unbound: Beyond Folk Activism
 ================================================================================
   &quot;When we read in the evening paper that we‚Äôre footing the bill for another bailout, we react by complaining to our friends, suggesting alternatives, and trying to build coalitions for reform. This primal behavior is as good a guide for how to effectively reform modern political systems as our instinctive taste for sugar and fat is for how to eat nutritiously.&quot; ... &quot;Folk activism treats policies and institutions as the result of specific human intent. But policies are in large part an emergent behavior of institutions, and institutions are an emergent behavior of the global political ecosystem.&quot;
   href="http://www.cato-unbound.org/2009/04/06/patri-friedman/beyond-folk-activism/"
@@ -5192,7 +5252,7 @@ http://www.reddit.com/r/science/comments/862en/you_and_your_research_a_lecture_o
 "Learning how to learn", Idries Shah
 ================================================================================
 https://en.wikipedia.org/wiki/Learning_How_to_Learn
-tag="learning pedagogy cogsci"
+tag="learning pedagogy psychology"
 
 Is there really such a thing as &quot;random&quot;?
 ================================================================================
@@ -5643,7 +5703,7 @@ Annals of Medicine: The Checklist: Reporting &amp; Essays: The New Yorker
 ================================================================================
   list-making. checklists improve quality.
   href="http://www.newyorker.com/reporting/2007/12/10/071210fa_fact_gawande"
-    tag="information cogsci"
+    tag="information psychology"
   time="2008-02-08T02:15:08Z" 
 
 Clarity Sought on Electronics Searches - washingtonpost.com
@@ -5945,7 +6005,7 @@ resources to the choice.
 Pedophrasty, Bigoteering, and Other Modern Scams
 ================================================================================
 https://medium.com/incerto/pedophrasty-bigoteering-and-other-modern-scams-c84bd70a29e8
-tag="concepts cogsci mental-model"
+tag="concepts psychology mental-model"
 Pedophrasty: Argument involving children to prop up a rationalization and make the opponent look like an asshole, as people are defenseless and suspend all skepticism in front of suffering children: nobody has the heart to question the authenticity or source of the reporting. Often done with the aid of pictures.
 Bigoteering: tagging someone (or someone’s opinions) as “racist”, “chauvinist” or somethinglikeit-ist in situations where these are not warranted. This is a shoddy manipulation to exploit the stigmas accompanying such labels and force the opponent to spent time and energy explaining “why he/she is not a bigot”.
 Nabothizing: Production of false accusation, just as Jezebel did to dispossess Naboth.
@@ -5955,7 +6015,7 @@ Partializing: Exploiting the unsavory attributes of one party in a conflict with
 True Name
 ================================================================================
 https://en.wikipedia.org/wiki/True_name
-tag="concepts cogsci mental-model"
+tag="concepts psychology mental-model"
 > The notion that language, or some specific sacred language, refers to things by their true names has been central to philosophical study as well as various traditions of magic, religious invocation and mysticism (mantras) since antiquity.
 > ...
 > The true name of the Egyptian sun god Ra was revealed to Isis through an elaborate trick. This gave Isis complete power over Ra.
@@ -5965,7 +6025,7 @@ tag="concepts cogsci mental-model"
 Idioglossia
 ================================================================================
 https://en.wikipedia.org/wiki/Idioglossia
-tag="concepts cogsci mental-model"
+tag="concepts psychology mental-model"
 
 Principal–agent problem
 ================================================================================
@@ -5976,7 +6036,7 @@ tag="concepts politics economics mental-model"
 Reality has a surprising amount of detail
 ================================================================================
 http://johnsalvatier.org/blog/2017/reality-has-a-surprising-amount-of-detail
-tag="concepts cogsci emergence mental-model"
+tag="concepts psychology emergence mental-model"
 > This surprising amount of detail is is not limited to “human” or “complicated” domains, it is a near universal property of everything from space travel to sewing, to your internal experience of your own mind.
 > ...
 > Before you’ve noticed important details they are, of course, basically
@@ -6341,7 +6401,7 @@ tag="politics economics federal-reserve monetary-policy inflation"
 20200324
 Modern Monetary Theory
 https://www.reddit.com/r/wallstreetbets/comments/fnkbdh/dont_bet_against_mmt_you_will_lose_even_if_you/fla4bve/
-tag="economics mmt federal-reserve monetary-policy"
+tag="economics mmt federal-reserve monetary-policy equity stock options"
 >>>> QE and Fed intervention in a market is only for stabilization to prevent
 >>>> total credit seizure (even in 08 we didn't have a total failure). Once the
 >>>> loan is paid back it is destroyed in an M0 sense, it doesn't accumulate in
@@ -6437,7 +6497,7 @@ Faces and heels
 20200416
 Tim Ferriss: how to master any skill by deconstructing it | The Next Web
 https://www.youtube.com/watch?v=DSq9uGs_z0E
-tag="learning cogsci language pedagogy"
+tag="learning psychology language pedagogy"
 - deadlifts most effective if you start from ground and lift only ~5 inches.
 - best temperature for coffee = 180 F
 - play ~any song with 4 chords: https://www.youtube.com/watch?v=B_Smt1VsoqQ
@@ -6734,6 +6794,763 @@ https://www.youtube.com/watch?v=nM9f0W2KD5s
 Kapil Gupta: Conquering the Mind
 https://nav.al/kapil
 tag="concepts mental-model philosophy health"
-> Kapil: A human being becomes his environment. It is critical to savagely and
-> surgically arrange one’s environment in a way that is in accordance with where
-> he wants to go.
+> Kapil: A human being becomes his environment and that is why it’s absolutely
+> critical to savagely and surgically arrange one’s environment in a way that is
+> in accordance with where he wants to go. You become that which you are most
+> consistently exposed to.
+
+================================================================================
+20200611
+https://old.reddit.com/r/wallstreetbets/comments/grj5fa/the_mouthbreathers_guide_to_the_galaxy/
+tag="economics mmt federal-reserve monetary-policy equity stock options"
+> Yup, everyone got clapped on their stupidly leveraged derivatives books. It
+> seems Citadel is “too big to fail”. On 3/18, the payout on 3/20 TQQQ puts
+> alone if it went to 0 was $468m. And every single TQQQ put expiration would
+> have had to be paid. Tens or hundreds of billions on TQQQ puts alone. I’d bet
+> my ass Citadel was on the hook for a big chunk of those.
+
+================================================================================
+20200612
+https://old.reddit.com/r/wallstreetbets/comments/h0ytcy/the_liquidity_trap_how_qe_and_low_rates_might_be/ftqgnj8/
+tag="economics mmt federal-reserve monetary-policy equity stock options"
+> look into "Dollar Milkshake Theory" https://www.youtube.com/watch?v=PWVRWUkm54M
+>
+> Most of the world's debt is held by foreign governments and companies, yet
+> these debts denominated in US dollars.
+>
+> High debt countries will experience inflation as they print money to pay
+> interest, so their currencies will fall relative to the USD.
+>
+> As you mentioned, bond yields are worthless. But this is true globally, so
+> further uncertainty will trigger capital flight from foreign nations into the
+> USD, as a safe asset.
+>
+> If the USD appreciates and earnings don't rise, foreign governments and
+> companies will have a significantly harder time servicing their USD debt
+> because their own currencies will become worthless, leading to massive global
+> insolvency, and further USD appreciation.
+>
+> The endgame of this global insolvency scenario, is the US government being
+> forced to forgive debts, and foreign governments and central banks agreeing to
+> abandon the USD as the reserve currency. Maybe even the creation a new global
+> currency.
+>
+> TL:DR The global central banking system cannot handle a deflationary USA and
+> significant USD appreciation.
+
+================================================================================
+20200613
+Pronomos Capital
+https://www.pronomos.vc/
+tag="investment finance startup"
+> VC fund ... to create a new model for urban development where the city & its
+> institutions is the product. ... work in partnership with countries to create
+> new communities that seek - through good governance - to emulate the economic
+> success of Dubai, Hong Kong, Shenzhen and Singapore. Our investors include
+> Peter Thiel, Marc Andreessen, Balaji Srinivasan, Naval Ravikant, Joe
+
+================================================================================
+20200613
+Founders Fund
+https://foundersfund.com/
+tag="investment finance startup"
+stripe, twilio, spacex, airbnb, ...
+
+================================================================================
+20200615
+vscode notebook UX
+https://github.com/microsoft/vscode/issues/91987
+tag="tools programming ide vscode javascript typescript text-editor"
+design of vscode notebook experience (cf. jupyter): kernel/backend + cells
+
+================================================================================
+20200624
+Peer-to-peer canvas app for Urbit
+https://github.com/yosoyubik/canvas
+tag="urbit app p2p programming"
+https://news.ycombinator.com/item?id=23228058
+
+================================================================================
+20200627
+xi-editor retrospective
+https://raphlinus.github.io/xi/2020/06/27/xi-retrospective.html
+tag="tools programming xi rope vim neovim rust text-editor"
+
+================================================================================
+20200627
+Lezer (CodeMirror parsing system)
+https://marijnhaverbeke.nl/blog/lezer.html
+tag="programming parser syntax-highlighting text-editor"
+
+================================================================================
+20200628
+Semantic: Haskell library and command line tool for parsing, analyzing, and comparing source code
+https://github.com/github/semantic
+tag="programming parser ast syntax-highlighting code-navigation treesitter"
+Architecture:
+1. Reads blobs.
+2. Generates parse trees for those blobs with tree-sitter (an incremental parsing system for programming tools).
+3. Assigns those trees into a generalized representation of syntax.
+4. Performs analysis, computes diffs, or just returns parse trees.
+5. Renders output in one of many supported formats.
+Semantic leverages a number of interesting algorithms and techniques:
+- Myers' algorithm (SES) as described in the paper An O(ND) Difference Algorithm and Its Variations
+- RWS as described in the paper RWS-Diff: Flexible and Efficient Change Detection in Hierarchical Data.
+- Open unions and data types à la carte.
+- An implementation of Abstracting Definitional Interpreters extended to work with an à la carte representation of syntax terms.
+
+================================================================================
+20200628
+The False Dichotomy Stunting Tech
+https://www.aymannadeem.com/software/2019/08/06/The-False-Dichotomy-Stunting-Tech.html
+tag="software-engineering programming communication technology engineering"
+> Eugenia Cheng on the power of abstraction. She discussed the difference
+> between pedantry and precision.
+>
+> Pedantry is what she refers to as the noise — the opaque, ineffective
+> nerd-porn dialogue that obscures meaning by muddying it with jargon. Not only
+> can this result in gatekeeping, but it also allows incompetence to hide behind
+> unnecessarily intellectualized terminology. Precision, by contrast, was what
+> Dr. Cheng referred to as the signal — the bits of work that are expressed
+> clearly and without loss of detail.
+>
+> ... Being clear is not about being dumb, but, as Eugenia Cheng said, about
+> identifying a problem with the precision and clarity that is appropriate for
+> the context. ... Poor abstractions dumb down complexity and reduce precision.
+> Good abstractions make things more precise by creating context-appropriate
+> information and interfaces.
+>
+> “Being abstract is something profoundly different from being vague … to create
+> a new semantic level in which one can be absolutely precise.” — Edsger W. Dijkstra
+
+================================================================================
+20200630
+Dirtbag left
+https://en.wikipedia.org/wiki/Dirtbag_left
+tag="politics tropes concepts"
+> A mode of left-wing politics that eschews civility in order to convey
+> a socialist or left-wing populist message using subversive vulgarity. It is
+> most closely associated with American left-wing media that emerged in the
+> mid-2010s, most notably the podcast Chapo Trap House.
+
+================================================================================
+20200630
+Multi-channel network
+https://en.wikipedia.org/wiki/Multi-channel_network
+tag="software platform technology media"
+> A multi-channel network (MCN) is an organization that works with video platforms to offer assistance to a channel owner in areas such as "product, programming, funding, cross-promotion, partner management, digital rights management, monetization/sales, and/or audience development" in exchange for a percentage of the ad revenue from the channel.
+https://support.google.com/youtube/answer/2737059?hl=en
+> Multi-Channel Networks (“MCNs” or “networks”) are third-party service providers that affiliate with multiple YouTube channels to offer services that may include audience development, content programming, creator collaborations, digital rights management, monetization, and/or sales.
+
+================================================================================
+20200630
+Guy Who Reverse-Engineered TikTok Reveals the Scary Things He Learned
+https://news.ycombinator.com/item?id=23684950
+tag="security fingerprinting software technology machine-learning spam"
+> The "private data" the app collected, is used, for most part, fingerprint the unique user.
+>
+> In every MCN app, there was a huge fake user problem. If an app collect zero identifiable fingerprint, then a spammer can easily fake millions of views and manipulate ranked content. The app developers are asked think clever to collect every piece of info they can, while spammers spent night and days spoofing every parameter in a virtual machine or even on a matrix of remote controlled real phones.
+>
+> For example, if a iPhone 11 user logs in, but only with screen resolution of 320x240, is it legit? I have caught tens of thousands of fake users with simple checks like this. However the tricks expires pretty quickly, you have to move on with new feature checks, together with decision trees and bayesian networks.
+>
+> Some of the fingerprint collecting SDKs are even using native code to check some ARM specific instructions to tell if the device is fake or not. The parameters check had to be done in every important API calls, or spammers can easily pretend be good citizen during parameter checking process and swap the session to a cheaper VM/phone or spam the targeted API with scripts.
+
+================================================================================
+20200720
+Multiprotocol Label Switching Architecture
+https://tools.ietf.org/html/rfc3031
+tag="rfc network internet engineering ietf"
+next generation internet protocol / replaces tcp/ip?
+
+================================================================================
+20200720
+All of the World’s Money and Markets in One Visualization
+https://www.visualcapitalist.com/all-of-the-worlds-money-and-markets-in-one-visualization-2020/
+tag="economics finance stocks"
+All of the world’s money and markets, from the smallest to the biggest, along with sources used:
+  CATEGORY                                VALUE ($ BILLIONS, USD) SOURCE
+  ----------------------------------------------------------------------
+  Silver                                  $44                     World Silver Survey 2019
+  Cryptocurrencies                        $244                    CoinMarketCap
+  Global Military Spending                $1,782                  World Bank
+  U.S. Federal Deficit (FY 2020)          $3,800                  U.S. CBO (Projected, as of April 2020)
+  Coins & Bank Notes                      $6,662                  BIS
+  Fed's Balance Sheet                     $7,037                  U.S. Federal Reserve
+  The World's Billionaires                $8,000                  Forbes
+  Gold                                    $10,891                 World Gold Council (2020)
+  The Fortune 500                         $22,600                 Fortune 500 (2019 list)
+  Stock Markets                           $89,475                 WFE (April 2020)
+  Narrow Money Supply                     $35,183                 CIA Factbook
+  Broad Money Supply                      $95,698                 CIA Factbook
+  Global Debt                             $252,600                IIF Debt Monitor
+  Global Real Estate                      $280,600                Savills Global Research (2018 est.)
+  Global Wealth                           $360,603                Credit Suisse
+  Derivatives (Market Value)              $11,600                 BIS (Dec 2019)
+  Derivatives (Notional Value)            $558,500                BIS (Dec 2019)
+  Derivatives (Notional Value - High end) $1,000,000              Various sources (Unofficial)
+
+================================================================================
+20200720
+Gell-Mann amnesia effect
+https://en.wikipedia.org/wiki/Speeches_by_Michael_Crichton#GellMannAmnesiaEffect
+tag="concepts mental-model psychology"
+> phenomenon of experts believing news articles on topics outside of their
+> fields of expertise, even after acknowledging that articles written in the
+> same publication that are within the experts' fields of expertise are
+> error-ridden and full of misunderstanding.
+
+================================================================================
+20200720
+Turning the IDE Inside Out with Datalog
+https://news.ycombinator.com/item?id=23869592
+tag="datalog query language ide programming database"
+https://petevilter.me/post/datalog-typechecking/
+
+================================================================================
+20200720
+QUANTUMINSERT (QI), QUANTUMHAND
+https://news.ycombinator.com/item?id=23782093
+tag="police-state surveillance usgov government state security encryption nsa"
+https://blog.fox-it.com/2015/04/20/deep-dive-into-quantum-insert/
+NSA can read TCP sequence numbers or DNS query IDs, and then spoof valid response packets.
+NSA has QUANTUMINSERT capabilities since 2005.
+Detection is possible by looking for duplicate TCP packets but with different payload and other anomalies in TCP streams.
+QUANTUMHAND uses QUANTUMINSERT against targets visiting Facebook.
+Method:
+- observe HTTP requests by eavesdropping network traffic
+- inject malicious content into a specific TCP session
+- requires the capability to listen in on potentially high volumes of internet traffic, which requires substantial resources and a fast infrastructure
+Mitigation:
+- HTTPS in combination with HSTS can reduce the effectiveness of QI.
+- Using a CDN that offers low latency can make it very difficult for the QI packet to win the race with the real server.
+
+================================================================================
+20200720
+Reddit's website uses DRM for fingerprinting
+https://smitop.com/post/reddit-whiteops/
+tag="reddit security fingerprinting software technology webbrowser web"
+Reddit uses WhiteOps (third-party tool for "bot mitigation, bot prevention, and fraud protection".
+Script checks DRM and other features (does not actually need them, just for fingerprinting):
+- Contains what appears to be a Javascript engine JIT exploit/bug, "haha jit go brrrrr" appears in a part of the code
+- Obfuscated reference to res://ieframe.dll/acr.js, which can be used to exploit old Internet Explorer
+- Checks for various global variables and other indicators of headless and automated browsers.
+- Sends data to vprza.com and minkatu.com.
+- Checks if devtools is open
+- Detects installed text-to-speech voices
+- Checks if browsers have floating point errors when rounding 0.49999999999999994 and 2^52
+- Detects if some Chrome extensions are installed
+- Checks if function bodies that are implemented in the browser contain [native code] when stringified
+- Checks if toString itself is implemented in native code
+- Checks for Apple Pay support
+
+================================================================================
+20200729
+Joe Rogan Experience #1515 - Dr. Bradley Garrett
+https://www.youtube.com/watch?v=_kDKAOncclU
+tag="podcast prepper urban-explorer"
+London's "lost rivers": underground rivers converted to tunnels/sewers in the 1800s
+- River Tyburn
+- River Effra
+
+================================================================================
+20200731
+Harvard Study of Adult Development
+https://news.harvard.edu/gazette/story/2017/04/over-nearly-80-years-harvard-study-has-been-showing-how-to-live-a-healthy-and-happy-life/
+tag="psychology happiness life"
+https://news.ycombinator.com/item?id=24007274
+> Close relationships, more than money or fame, are what keep people happy
+> throughout their lives, the study revealed. Those ties protect people from
+> life’s discontents, help to delay mental and physical decline, and are better
+> predictors of long and happy lives than social class, IQ, or even genes.
+>
+> The people who were the most satisfied in their relationships at age 50 were the healthiest at age 80.
+
+================================================================================
+20200802
+Schiphol clock - Maarten Baas
+http://maartenbaas.com/real-time/schiphol-clock/
+tag="art time clock amsterdam airport"
+12-hour performance art film of Dutch artist Maarten Baas painting each minute
+of the hands of a clock.  In Schiphol Airport since 2016.
+
+================================================================================
+20200802
+GITenberg project
+https://www.gitenberg.org/
+tag="literature ebooks books pedagogy"
+- Curated, usable, attractive ebooks in the public domain.
+- Converts Project Gutenberg HTML to ePub.
+
+================================================================================
+20200827
+QUIC: Quick UDP Internet Connections
+tag="networks proxy quic tcp udp protocol http spdy cryptopgraphy tls ssl"
+- purpose:
+  - avoid HOL blocking
+    - ...by "handling packets separately (not within TCP)"
+  - evolve Congestion Control faster (side-step OS vendors)
+- enhances UDP
+  + ordering
+  + multiplexed connections between two endpoints over UDP
+    - works in concert with HTTP/2 (SPDY) multiplexed connections, allowing multiple streams to reach endpoints independently
+    - compare: HTTP/2 over TCP can suffer head-of-line (HOL) blocking
+- reduce latency
+  - speculative DNS and TCP pre-resolution
+- monolithic: violates traditional layers. Scope includes delivery + control + security.
+- TCP:
+  - packet loss *is* the "congestion notification"
+  - "No OS API for inspecting out-of-order arrivals."
+  - TLS uses CBC (cipher block chaining: hash of the previous block is used as
+    IV of the next block) => another source of HOL blocking in TCP.
+  - Hack: to workaround TCP perf, browsers open 6 cxns to the server
+    - each cxn has its own congestion window
+    - servers add subdomains just to allow >6 cxns...
+    - circular problem: multiple congestion windows => causes fighting/variance, wastes bandwidth => causes congestion => causes retransmissions => ...
+  - TCP packet loss response is painful: AIMD (additive increase, *multiplicative* decrease)
+
+================================================================================
+20200809
+interview with Elon Musk about SpaceX Starship
+https://www.youtube.com/watch?v=cIQ36Kt7UVg
+tag="space spacex science starship nasa"
+"If a design is taking too long, the design is wrong. ... Strive to delete parts and processes. ... Question the constraints."
+- Elon Musk
+
+================================================================================
+20200809
+WebAuthn guide
+https://webauthn.guide/
+tag="security infosec webauthn u2f fido mfa software-engineering"
+implementing MFA on a new website:
+- implement WebAuthn, not U2F (older, non-standard hack)
+
+================================================================================
+20200809
+Security Keys, webauthn (27 Mar 2018)
+https://www.imperialviolet.org/2018/03/27/webauthn.html
+tag="security infosec webauthn u2f fido mfa software-engineering"
+- "relying party": any entity trying to authenticate a user
+- U2F: "Universal 2nd factor"
+- CTAP1: version 1 “Client To Authenticator Protocol”
+  - two operations: creating a new key, and signing with an existing key.
+  - a “user presence” test before performing operations. E.g. a button or
+    capacitive sensor that you must press. While not triggered, operations
+    return a specific error code and the host is expected to retry.
+  - tokens are nearly stateless in practice.
+  - strictly monotonic "signature counter"; relying party is intended to record
+    the values and notice if a private key has been duplicated, because the
+    strictly-monotonic property will eventually be violated if multiple,
+    independent copies of the key are used.
+    - problems with this:
+      1. recall that CTAP1 tokens have very little state in order to keep costs
+         down. Because of that, most/all tokens have a single, global counter
+         shared by all keys created by the device. This means that the value and
+         growth rate of the counter is a trackable signal that’s transmitted to
+         all sites that the token is used to login with. For example, the token
+         that I’m using right now has a counter of 431 and I probably use it far
+         more often than most because I’m doing things like writing example
+         Python code to trigger signature generation. I’m probably pretty
+         identifiable because of that.
+      2. Since the counter is per-token, it’ll commonly jump several values
+         between logins to the same site because the token will have been used
+         to login elsewhere in-between. That makes the counter less effective at
+         detecting cloning.
+- CTAP2: updated standard for tokens, to take advantage of webauthn
+  - main feature: devices can be used as a 1st (and only) factor. I.e. they have
+    enough internal storage to contain a username and so both provide an
+    identity and authenticate it.
+.
+> The FIDO Javascript API is not the future, however. Instead, the W3C is defining an official Web Authentication standard (webauthn) for Security Keys.
+.
+> a relying party can determine, with some confidence, that a newly created key
+> is stored in a Yubico 4th-gen U2F device by checking the attestation
+> certificate and signature.
+>
+> FIDO does not dismiss [vendor lock-in] worries and their answer, for the
+> moment, is the metadata service (MDS). Essentially this is a unified root
+> store that all sites checking attestation are supposed to use and update from.
+> ... My advice is for sites to ignore attestation if you’re serving the public.
+
+================================================================================
+20200809
+Who needs this filesystem malarkey anyway? (20 Jul 2003)
+https://www.imperialviolet.org/2003/07/20/who-needs-this-filesystem-malarkey-anyway.html
+tag="djb filesystem kernel interface design compsci software-engineering"
+djb:
+> A small interface (for example, a descriptor allowing read() or write())
+> supports many implementations (disk files; network connections; and all sorts
+> of interesting programs via pipes), dramatically expanding the user's power to
+> combine programs. A big interface (for example, a file descriptor that allows
+> directory operations) naturally has far fewer implementations.
+
+================================================================================
+20200809
+From Benjamin Franklin to Cadwallader Colden, 29 September 1748
+https://founders.archives.gov/documents/Franklin/01-03-02-0133
+tag="history quotation benjamin-franklin role-model"
+> "I shall like to give my self ... Leisure to read, study, make Experiments,
+> and converse at large with such ingenious and worthy Men as are pleas’d to
+> honour me with their Friendship" - Benjamin Franklin
+
+================================================================================
+20200809
+Poor Richard, 1736
+https://founders.archives.gov/documents/Franklin/01-02-02-0019
+tag="history quotation benjamin-franklin"
+> Force shites upon Reason’s Back.
+> Lovers, Travellers, and Poets, will give money to be heard.
+> He that speaks much, is much mistaken.
+> Creditors have better memories than debtors.
+> Forwarn’d, forearm’d, unless in the case of Cuckolds, who are often forearm’d before warn’d.
+
+================================================================================
+20200810
+Jeremy Howard: fast.ai Deep Learning Courses and Research | Artificial Intelligence (AI) Podcast
+https://www.youtube.com/watch?v=J6XcP4JOHmk
+tag="podcast video deep-learning machine-learning compsci engineering swift healthcare"
+- swift is compelling because the whole stack uses the same language
+  (vs python = {C, numpy, CUDA, Makefile, …})
+- fast.ai moving to swift (~3 years out) + tensorflow
+  - swift "layer on top of MLIR" https://mlir.llvm.org
+- "python for tensorflow is a disaster"
+- AI concerns:
+  - how to avoid "runaway feedback loops"?
+
+================================================================================
+20200810
+MLIR: Multi-Level Intermediate Representation
+https://mlir.llvm.org/
+tag="compiler llvm"
+hybrid IR which can support multiple different requirements in a unified
+infrastructure. For example, this includes:
+- The ability to represent dataflow graph (such as TensorFlow), including
+  dynamic shapes, the user-extensible op ecosystem, TensorFlow variables, etc.
+- Optimizations and transformations typically done on a such graph (e.g. in Grappler).
+- Representation of kernels for ML operations in a form suitable for optimization.
+- Ability to host high-performance-computing-style loop optimizations across
+  kernels (fusion, loop interchange, tiling, etc) and to transform memory
+  layouts of data.
+- Code generation “lowering” transformations such as DMA insertion, explicit
+  cache management, memory tiling, and vectorization for 1D and 2D register
+  architectures.
+Non-goals:
+- We do not try to support low level machine code generation algorithms (like
+  register allocation and instruction scheduling). They are a better fit for
+  lower level optimizers (such as LLVM).
+- We do not intend MLIR to be a source language that end-users would themselves
+  write kernels in (analogous to CUDA C++). On the other hand, MLIR provides the
+  backbone for representing any such DSL and integrating it in the ecosystem.
+Outcomes:
+- For example, LLVM has non-obvious design mistakes that prevent a multithreaded
+  compiler from working on multiple functions in an LLVM module at the same
+  time. MLIR solves these problems by having limited SSA scope to reduce the
+  use-def chains and by replacing cross-function references with explicit symbol
+  reference.
+
+================================================================================
+20200812
+UPX: Ultimate Packer for eXecutables
+https://upx.github.io/
+tag="elf binary compression c"
+portable, extendable, high-performance executable packer for several executable formats.
+shrink executables by 50%
+
+================================================================================
+20200815
+Review of Paul Graham's Bel, Chris Granger's Eve, and a Silly VR Rant
+https://gist.github.com/wtaysom/7e5fda6d65807073c3fa6b92b1e25a32
+tag="datalog query language programming-paradigm vm eve light-table"
+> If Eve was so nifty, why did it fail? Technical problems:
+> (1) keying
+> (2) inspection
+> (3) reflection
+> (4) event handling
+>
+> (1) Keying proved my most common problem when trying to use Eve. I want an
+> entity per something where the something is complex: like a bid per bidder per
+> product per round. Each bid also has non-identifying properties: a price, the
+> time it was entered, who it was entered by, etc. ... Though internally Eve
+> dealt with keys, they never completed the theory nor committed to exposing the
+> details.
+>
+> (2) Then without great ways to inspect the database, I couldn't see what was
+> going on, how keys came into play.
+>
+> (3) Since Eve patterns can match against anything, I found it easy to check
+> invariants but hard to identify causes of their violation. One could not
+> reflect on how rules gave rise to derived properties. This was always a goal,
+> just never happened.
+>
+> (4) Though Eve had a decent [theoretical foundation](http://bloom-lang.net/index.html)
+> for controlled change over time, it was never exposed in a way that one could
+> easily reason about. The primary challenge being that you want an event to
+> arise in the database, effect a change, then dissipate. Whereas an imperative
+> language lets you write step one, two, three, Eve never had that view. Change
+> was managed through an intricate interplay of rules, always hidden. Dijkstra
+> makes a good point:
+>
+> > we should do our utmost to shorten the conceptual gap between the static
+> > program and the dynamic process, to make the correspondence between the
+> > program (spread out in text space) and the process (spread out in time) as
+> > trivial as possible.
+>
+> Given thought, time, practice, these issues could be have been addressed — but
+> only from grappling with ordering seriously. Why weren't (2) inspection, (3)
+> reflection, and (4) dynamics visualized? To show a thing, it cannot be
+> formless. It must be positioned, arranged in space. With Eve, they kept
+> punting, ignoring the interplay between the ordered and the unordered. Even
+> difficulties in (1) keying amounted to leaking imperative implementation
+> details.
+
+================================================================================
+20200823
+Plan A for the coronavirus
+https://medium.com/@curtis.yarvin/plan-a-for-the-coronavirus-7db3997490c1
+tag="government-failure covid19 virus curtis-yarvin"
+> Anyone repeating lines like “the Trump administration has failed” is spreading
+> an Orwellian lie. There is no “Trump administration.” There is an elected
+> showman and his cronies, fronting for an unaccountable permanent government.
+> The celebrities are neither in charge of the bureaucrats, nor deserve to be.
+
+================================================================================
+20200824
+Unregistered 116: Curtis Yarvin (AKA "Mencius Moldbug")
+https://www.youtube.com/watch?v=6GW-YMa68o4
+tag="concepts government politics philosophy curtis-yarvin history libertarianism monarchy"
+- "Sovereignty is conserved."
+- How DC works: "Everyone wants status but no one wants responsibility."
+
+================================================================================
+20200824
+POAAS 03 - Surveying Ethiopian History w/ Curtis Yarvin
+https://www.youtube.com/watch?v=BKdOoR4zhOc
+tag="concepts politics history curtis-yarvin"
+- https://en.wikipedia.org/wiki/Cursus_honorum
+  Latin for "course of honor", or colloquially "ladder of offices".
+- "Unconsidered superiority" is the attitude of a parochial barbarian.
+- "Atheist cold war Liberalism" is "secularized Christianity".
+- atheist vs. anti-theist
+
+================================================================================
+20200826
+Gray Mirror of the Nihilist Prince with Curtis Yarvin
+https://www.youtube.com/watch?v=_8o0M24DrcE
+tag="concepts government politics philosophy curtis-yarvin history libertarianism monarchy"
+- "Exit, voice, and loyalty."
+  - Exist outside of power, not in antagonism to it. Disengage.
+- "When people think of 'regime change' as implying violent discontinuity, they
+  couldn't be more wrong."
+  - Stasi officers (GDR/DDR) still receive pensions.
+- Structure of government matters much more than policies.
+  - "This is a very optimistic thought because it means the problem does not
+    require changing the minds of many people, the problem is just that the
+    structure is wrong."
+  - Leftism selects for power without responsibility.
+  - "Power without responsibility is the very definition of an oligarchy."
+- It is a very bad idea to "tempt power" (e.g. "fedposting"). Most people intuit
+  this, but they don't take that principle to an extreme, i.e. they don't
+  realize that *any* attempt to exert power is a fatal illusion.
+  - Free yourself from that illusion; merely observe.
+- Prefer abstractly inflammatory but concretely inert.
+- In general, antagonizing power is beneficial to power [because they get to
+  define/interpret your ingression: "you inhabit their frame"].
+  - 31:45-36:00 interesting!
+- "Internal exile": living like an expat without actually leaving a geopolitical
+  space. Exit spiritually but not physically. "In the closet".
+  - Impossible to physically exit the global empire.
+- Time is on your side.
+  - "When you try to matter in the short term as a dissident against an enormous
+    regime, you are just thrashing."
+  - Don't associate with anyone who is incapable of calm/intellectual outrage
+    without being able to control their expression of it.
+- Don't help the regime by trying to stabilize it.
+  - "When you slow down the regime, you're doing it a service by keeping it from
+    going crazy."
+  - "When you elect a conservative, this just increases the resonance of the
+    left's fundraising appeals. The left is never in charge, they don't want the
+    responsibility of being in power, they want to be the underdogs."
+  - "When you fight these fights, you're an actor in their fundraising pitch."
+  - "A fraction of that energy pulled away from the system and providing an
+    intellectual exit, is much more valuable."
+- _Salus populi suprema lex_. (Latin: "The health of the people is the supreme law.")
+  - Compare the modern GDP-driven motto: _Luxus populi suprema lex_.
+- National identity is superficial, is going stale.
+- "Arguing about policy is just LARPing: you're putting something that used to
+  work in a different context, into a context where it's fake and lame."
+- Rule #1 of regime change: cannot punish anyone for supporting the old regime.
+
+================================================================================
+20200828
+Robin Hanson and "Mencius Moldbug" debate futarchy at Foresight 2010
+https://www.youtube.com/watch?v=Tb-6ikXdOzE
+tag="concepts government politics philosophy curtis-yarvin history libertarianism monarchy"
+- "Government _wasteful spending_ is really _disguised profits_ going to
+  beneficiaries in the form of entitlements and overpaying."
+- "There's a crucial difference between a bet and a vote." (skin in the game)
+
+================================================================================
+20200905
+THINGS HIDDEN 17: The Glorious Yeast Infection of Christianity (Curtis Yarvin Interview)
+https://www.youtube.com/watch?v=otXb3DVGvSI
+tag="concepts government politics philosophy curtis-yarvin history libertarianism monarchy"
+- "Dept. of Homeland Security" (2001) is linguistically synonymous with NSA, but
+  "National Security" actually means "world domination": FDR declared "events
+  anywhere in the world affect the national security of the US".
+  - Ironic because the US excuse for entering WW2 was to prevent (assumed)
+    German plans for world domination.
+- Q: why didn't Japan attack Soviets w/ Germany?
+  A: "Axis" alliance was mostly PR, weren't coordinated.
+- Pagan strategy: attack enemy civilians. (wielded by both Allies and Axis, failed)
+
+================================================================================
+20200923
+Curtis Yarvin Live at the Based Deleuze Release Party in LA (Mencius Moldbug)
+https://www.youtube.com/watch?v=RRQO3VbJsMw
+tag="concepts government politics philosophy curtis-yarvin history libertarianism monarchy"
+- Trolling (US-Vietnam war): draw fire from anti-aircraft so you can destroy
+  them with countermissles. If you don't have countermissles, don't draw fire...
+- "Hide your power level."
+- History: if you can't empathize with both sides, you don't understand the
+  events.
+- Formal vs Informal power
+  - Worst case = informal power dominates.  Informal power is unaccountable,
+    thus the formal (accountable) power absorbs popuplar opposition.
+  - Best case = formal power dominates, i.e. the formal structure is the actual,
+    accountable structure.
+- "accountable monarchy" is the best form of government.
+  - Apple, Amazon, Elizabethan England
+  - CEO is "completely in charge, but completely accountable (to the board)".
+- "Industrial Revolution was actually the corporate revolution: people learned
+  how to operate in state-like (monarchical) structures"
+
+================================================================================
+20200923
+Descriptive constitution of the modern regime: a clerical oligarchy in the shell of a republic
+https://graymirror.substack.com/p/3-descriptive-constitution-of-the
+tag="concepts government politics philosophy curtis-yarvin history libertarianism monarchy"
+- Three forms of power/regime:
+  1. monarchy (rule of one)
+  2. oligarchy (rule of a minority)
+  3. democracy (rule of a majority)
+- Every stable regime must either _harness_ or _contain_ all three forms of power.
+  - Since most regimes contain two and harness one, we classify a regime by the
+    force it harnesses.
+  - USG formal (constitution) regime: monarchy+democracy
+  - USG informal (actual) regime: oligarchy (decentralized, unaccountable)
+- Best form of govt: _harness_ monarchy, _contain_ oligarchy+democracy
+
+================================================================================
+20200928
+Principles of any next regime: understand the purpose of government from scratch
+https://graymirror.substack.com/p/4-principles-of-any-next-regime
+tag="concepts government politics philosophy curtis-yarvin history libertarianism monarchy"
+> Better to know, than to see; better to see, than be seen; better to be seen, than noticed; better to be noticed, than feared; better to be feared, than hated; better to be hated, than beaten; better to be beaten, than killed; better you are killed, than your family. The fox has no illusions and is always, in principle, on the move.
+> ...
+> Absolutism, the yang of nihilism, means thinking ex nihilo: from scratch, from first principles, not relative to any specific past or present reality. Nihilists do care about reality. We care about it so much that we accept no substitutes. The motto of the Royal Society, crafted in happier times: nullius in verbum. We take no one’s word for it—that’s what it means to “believe in nothing.”
+
+================================================================================
+20200827
+Interview with Zig language creator Andrew Kelley
+https://news.ycombinator.com/item?id=24292437
+tag="programming-language zig c low-level"
+- Addresses 3 problems of C++: language complexity, compilation speed, safety.
+- Simplicity is a core principle (in the spirit of Clojure, Lua, Lisp)
+  - example: `comptime` (compile-time introspection) is a singular mechanism
+    that removes the need for special cases like generics, macros.
+  - no macros
+  - no generics
+- "Zig's simplicity hides how revolutionary it is, both in design and in potential."
+- coroutines
+- C interop (more ergonomic than rust bindgen)
+- recursion puts stack frames onto heap to avoid overflow
+
+================================================================================
+20200827
+The unreasonable effectiveness of algorithms in boosting team happiness
+https://www.balena.io/blog/the-unreasonable-effectiveness-of-algorithms-in-boosting-team-happiness/
+tag="sat-solver scheduling algorithms"
+
+================================================================================
+20200827
+American fuzzy lop – a security-oriented fuzzer
+https://lcamtuf.coredump.cx/afl/
+tag="static-analysis fuzzer algorithms"
+https://news.ycombinator.com/item?id=22171285
+AFL basic algorithm is:
+    def run_test_case(input):
+      # return a set() of instructions that the target executes when ran on `input`
+      # or throw a CrashException if the target crashes
+    def mutate(input):
+      # mess with the input- flip some bits, delete chunks, set things to 0xffffffff... randomly
+      # return the mutated input
+    def fuzz(initial_test_cases):
+      test_cases = initial_test_cases
+      coverage_seen = set()
+      # collect coverage from the initial inputs
+      for case in test_cases:
+        coverage_seen += run_test_case(case)
+      while True:
+        fuzzed = mutate(random.choice(test_cases))
+        try:
+          new_coverage = run_test_case(fuzzed) - coverage_seen
+          if new_coverage:
+            # ooh, this input did something we've never seen before!
+            # save it, so it can be used as a starting point
+            # for even more mutation
+            test_cases.add(fuzzed)
+            coverage_seen += new_coverage
+        except CrashException:
+            # we successfully crashed the target!
+            # save fuzzed off to disk or something and log a happy message
+- In practice, run_test_case() doesn't return a set of instructions, it's
+  a bitmap / psuedo-Bloom filter of basic blocks hit. (A basic block is "a
+  sequence of instructions that doesn't have any unusual control flow"--so if
+  you run the first instruction in a basic block, you'll run all the rest.)
+
+================================================================================
+20200827
+Guide to using YubiKey for GPG and SSH
+https://github.com/drduh/YubiKey-Guide
+tag="security infosec gpg ssh yubikey u2f fido mfa"
+> All YubiKeys except the blue "security key" model are compatible with this guide.
+
+================================================================================
+20200830
+Reasons Not to Become Famous
+https://tim.blog/2020/02/02/reasons-to-not-become-famous/
+tag="security privacy paranoia identity-theft"
+- Fame is for suckers (status games).
+- Use a UPS Store or other off-site mailing address for receiving packages.
+  Never have anything mailed to your address; your name/address will end up in
+  company/government databases which are rented/traded/searchable.
+
+================================================================================
+20200922
+Palantir products: Foundry, Gotham, Metropolis
+https://www.quora.com/What-are-the-main-differences-between-the-Palantir-Metropolis-and-Gotham-platforms
+tag="technology startup surveillance data data-mining datasets data-management data-science statistics visualization tools machine-learning"
+Foundry:
+- Versioning. Foundry explicitly tracks future state, independent of (and in addition to) past state. You can branch out to apply different versions of code against the same chunk of data and track, for each version of the data, which version of the code was used to create it. So you can understand what you knew at a point in time, and how the data has evolved since.
+- Branching. Building a more explicit orchestration system, and cleaned up the general idea of the "pipeline". Instead of a system that just moves data from point A to point G, we built a system that lets you move data from point A to point G, then look back at point F and say “Hey, that was interesting. Let's try some different, random variation, but make sure A-G is still happening.” Work is safe by default, and you have the freedom to test novel ideas without impacting other users.
+- Truly “democratizing” data. Creating a front end that empowers a very broad range of users to engage with data. We wanted people to be able to explore and adapt all the data they could access, in ways that are typically limited to very technical users. Today, Foundry is a platform that provides universal, secure access to all of an organization's content, for decision makers at every level, from the factory floor to the executive office.
+concepts:
+- "Ontology": a common model for integrated data that an organization can customize to represent their world. Instead of spreadsheets, columns, and rows that only people who are fluent in data understand, we model the world using concepts that everyone understands, like planes or cars or customers. Now all users in an organization speak the same language (and they customize their ontology, so they're speaking their language).
+
+================================================================================
+20200929
+Skin in the Game | Nassim Nicholas Taleb | Talks at Google
+https://www.youtube.com/watch?v=uv6KLbkvua8
+tag="statistics game-theory power politics government systems nassim-taleb monarchy"
+- Negative golden rule: don't do to others what you wouldn't want done to you.
+- Accountability:
+  - "Experts" of macro systems are not falsifiable; impossible to verify cause-effect in a macro system.
+    - Thus such experts "do not have skin in the game" (unaccountable).
+  - Progressive bureaucrats today can start horrific wars, are less accountable than monarchs.
+- Any political opinion must have a scale attached to it.
+- A public intellectual who doesn't take risks cannot be trusted.
+  - "Why do I insult people in my books? Because it signals risk-taking."
+- "Start a business. We're tired of people who want to work for NGOs."
+- dynamic vs static
+  - healthy economy if incumbent players are at risk
+  - unhealthy economy if incumbent players are effectively permanent
+- History tends to "revert to the truth", like "reversion to the mean".
